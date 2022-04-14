@@ -1,31 +1,123 @@
-//======8kyu - Removing Elements ======//
+//======8kyu - Freudian translator ======//
 
-// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+// You probably know the 42 number as "The answer to life, the universe and everything" according to Douglas Adams' "The Hitchhiker's Guide to the Galaxy". For Freud, the answer was quite different.
 
-// Example:
+// In the society he lived in, people-women in particular- had to repress their sexual needs and desires. This was simply how the society was at the time. Freud then wanted to study the illnesses created by this, and so he digged to the root of their desires. This led to some of the most important psychoanalytic theories to this day, Freud being the father of psychoanalysis.
 
-// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+// Now, basically, when a person hears about Freud, s/he hears "sex" because for Freud, everything was basically related to, and explained by sex.
 
-// None of the arrays will be empty, so you don't have to worry about that!
+// In this kata, the toFreud() function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. Note that an empty string, or no arguments, should result in the ouput being ""(empty string).
 
-//P: No arrays will be empty. Doesnt matter if they are special character or not since they may be removed, etc. 
-//R: Return an array with every other element starting with number 1. That means that it will be all odd numbers.
-//E: if given [1,3, 'fish', 'fishsticks', 3] => [1, 'fish', 3]
-// if given [9,9,99,999,3] => [9, 99, 3]
-// if given [10,14,6,5,19] => [10,6,19]
 
-//P: Make a function that take in an array
-function removeEveryOther(arr){
-  return arr.filter((elem, index) => {
-    return index % 2 === 0;
-  });
+const toFreud = str => str === '' ? '' : str.split(' ').map(e => 'sex').join(' ')
+
+// if str === '' return ''. if not split string and map each element to convert to sex. Join words and put a space between each one. 
+
+
+//======8kyu - Find Multiples of a Number ======//
+
+
+// In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+// If you can, try writing it in only one line of code.
+
+
+function findMultiples(int,limit){
+  let result = []
+  
+  for (let i = int; i<=limit ; i+=int)
+    result.push(i)
+    
+  return result
+}
+
+//======8kyu - Find Maximum and Minimum Values of a List ======//
+
+// Your task is to make two functions (max and min, or maximum and minimum, etc., depending on the language) that receive a list of integers as input and return, respectively, the largest and lowest number in that list.
+
+var min = function(list){
+  return Math.min(...list)
+}
+
+var max = function(list){
+  return Math.max(...list)
 }
 
 
 
+//====== 8 kyu "This" is a problem ======//
+
+// We want to create a constructor function 'NameMe', which takes first name and last name as parameters. The function combines the first and last names and saves the value in "name" property.
+
+// We already implemented that function, but when we actually run the code, the "name" property is accessible, but the "firstName" and "lastName" is not accessible. All the properties should be accessible. Can you find what's wrong with it? A test fixture is also available
+
+// Given //
+
+// function NameMe(first, last) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   return {name: this.firstName + ' ' + this.lastName};
+// }
+
+//Solution//
+
+function NameMe(first, last) {
+  this.firstName = first;
+  this.lastName = last;
+  this.name = this.firstName + ' ' + this.lastName
+}
+
+//====== 8 kyu Barking Mad ======//
+
+// Teach snoopy and scooby doo how to bark using object methods. Currently only snoopy can bark and not scooby doo.
 
 
+// Given //
+// function Dog (breed) {
+//   this.breed = breed;
+// }
+
+// var snoopy = new Dog("Beagle");
+
+// snoopy.bark = function() {
+//   return "Woof";
+// };
+
+// var scoobydoo = new Dog("Great Dane");
 
 
+//Solution
 
+function Dog (breed) {
+  this.breed = breed;
+}
+
+var snoopy = new Dog("Beagle");
+
+snoopy.bark = function() {
+  return "Woof";
+};
+
+var scoobydoo = new Dog("Great Dane");
+
+scoobydoo.bark = function(){
+  return 'Woof'
+}
+
+
+// ====== Area of Square ======//
+
+// Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. Return the result rounded to two decimals.
+
+// area of square = l x l
+// circumference of circle = 2 * pi * radius
+// arc = 2 * pi * radius / 4
+//radius = (arc * 4) / (2 * pi)
+
+function squareArea(A){
+  radius = (A * 4) / (2 * Math.PI)
+  return +Math.pow(radius,2).toFixed(2)
+}
 
