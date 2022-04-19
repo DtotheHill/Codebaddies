@@ -326,3 +326,5 @@ function Hero (name) {
   this.damage = 5;
   this.experience = 0;
 }
+
+

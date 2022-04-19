@@ -27,4 +27,5 @@ const main = () =>
   [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action =>
     action()
   )
+
   
