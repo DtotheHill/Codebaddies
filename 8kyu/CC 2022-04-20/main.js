@@ -256,3 +256,10 @@ let combineNames = (n1,n2) => `${n1} ${n2}`
 // }
 
 let orderOperations = ()  => (2 + 2) * (2 + 2) * 2
+
+
+//====== 8kyu Array Mean ======//
+
+// Find the mean (average) of a list of numbers in an array.
+
+var findAverage = nums => nums.reduce((a,c) => a + c) / nums.length
