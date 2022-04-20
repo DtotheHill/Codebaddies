@@ -30,7 +30,7 @@ const main = () =>
 )
 
 
-// ====== 8kyu Check for factor ======//
+// ====== 8kyu Check for factor =======//
 
 // This function should test if the factor is a factor of base.
 
@@ -51,6 +51,7 @@ function checkForFactor (base, factor) {
     return false
   }
 }
+
 
 
 
