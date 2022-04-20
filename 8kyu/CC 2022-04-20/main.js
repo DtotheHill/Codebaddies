@@ -217,3 +217,25 @@ function greet (name, owner) {
 }
 
 let greet = (name, owner) => (name == owner) ? 'Hello boss' : 'Hello guest'
+
+//====== 8kyu Create the Room======//
+
+// You are creating an "Escape the room" game. The first step is to create a hash table called rooms that contains all of the rooms of the game. There should be at least 3 rooms inside it, each being a hash table with at least three properties (e.g. name, description, completed).
+
+const rooms = {
+  firstRoom: {
+    name: 'Kitchen',
+    description: 'Easy',
+    completed: true
+  },
+  secondRoom: {
+    name: 'Dining Room',
+    description: 'Medium ',
+    completed: false
+  },
+  thirdRoom: {
+    name: 'Bathroom',
+    description: 'Hard',
+    completed: true
+  },
+}
