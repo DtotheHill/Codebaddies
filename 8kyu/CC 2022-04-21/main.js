@@ -56,3 +56,16 @@ const arr = N => {
   }
   return arr
 }
+
+
+//====== Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence ======//
+
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+function replace(s){
+  let vowels = ['a','e','i','o','u','A','E','I','O','U']
+  return s.split('').map(item => vowels.includes(item) ? '!':item).join('')
+  
+}
+
