@@ -423,3 +423,15 @@ function preFizz(n) {
 function toBinary(n){
   return +n.toString(2)
 }
+
+
+// ====== 8kyu CSV representation of array ======//
+
+// Create a function that returns the CSV representation of a two-dimensional numeric array.
+
+function toCsvText(array) {
+  for (let i = 0; i < array.length; i++){
+    array[i] = array[i].join(',')
+  }
+  return array.join('\n')
+}
