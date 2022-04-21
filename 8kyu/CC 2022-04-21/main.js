@@ -159,3 +159,12 @@ function peopleWithAgeDrink(old) {
     return 'drink whisky'
   }
 };
+
+// ====== 8kyu Hex to Decimal ======//
+
+//Complete the function which converts hex number (give as a string) to a decimal number
+
+function hexToDec(hexString){
+  return parseInt(hexString, 16);
+}
+
