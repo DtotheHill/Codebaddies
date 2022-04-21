@@ -286,7 +286,7 @@ function warnTheSheep(queue) {
 }
 
 
-// ====== 8kyu Revering words in a string ======//
+// ====== 8kyu Reversing words in a string ======//
 
 // You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
 
@@ -294,4 +294,16 @@ function warnTheSheep(queue) {
 
 function reverse(string){
   return string.split(' ').reverse().join(' ')
+}
+
+
+// ====== 8kyu Multi table for number ======//
+
+// Your goal is to return multiplication table for number that is always an integer from 1 to 10.
+function multiTable(number) {
+  let array = []
+  for (let i =1; i <= 10; i++){
+    array.push(`${i} * ${number} = ${number * i}`)
+  }
+  return array.join('\n')
 }
