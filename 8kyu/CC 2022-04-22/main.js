@@ -63,13 +63,9 @@ function derive(coefficient,exponent) {
 
 
 function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
-    sharkSpeed = (dolphin) && sharkSpeed/2
-    let attackDistance = sharkDistance - pontoonDistance
-    let closingSpeed = (sharkSpeed > youSpeed) ? sharkSpeed - youSpeed :
-    let safetyTime = pontoonDistance/youSpeed
-    let sharkTime = attackDistance/closingSpeed
-    return safetyTime <+ sharkTime ? 'Alive!' : 'Shark Bait!'
-  }
+    sharkSpeed = (dolphin) ? sharkSpeed/2 : sharkSpeed
+    return (sharkDistance/sharkSpeed) < (pontoonDistance/youSpeed) ? 'Shark Bait!' :'Alive!'
+}
 
 
 
