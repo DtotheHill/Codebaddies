@@ -115,3 +115,24 @@ function quadratic(x1, x2){
     return [1, -x1-x2, x1*x2 ]
 }
 
+// ====== 8kyu Polish alphabet ======// 
+
+// There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+// Your task is to change the letters with diacritics:
+
+
+// ą -> a,
+// ć -> c,
+// ę -> e,
+// ł -> l,
+// ń -> n,
+// ó -> o,
+// ś -> s,
+// ź -> z,
+// ż -> z
+
+function correctPolishLetters (string) {
+    let letter = {'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z'}
+    return string.replace(/[ąćęłńóśźż]/g, match => letter[match])
+}
