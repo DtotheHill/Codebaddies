@@ -136,3 +136,20 @@ function correctPolishLetters (string) {
     let letter = {'ą':'a','ć':'c','ę':'e','ł':'l','ń':'n','ó':'o','ś':'s','ź':'z','ż':'z'}
     return string.replace(/[ąćęłńóśźż]/g, match => letter[match])
 }
+
+// ====== 8kyu Get ascii value of character ======//
+
+// Get ASCII value of a character.
+
+// For the ASCII table you can refer to http://www.asciitable.com
+
+function getASCII(c){
+    return c.charCodeAt(0)
+}
+
+//arrow function
+let getASCII = c => c.charCodeAt(0)
+
+
+// ====== 8kyu Thinkful - Number Drills: Blue and red marbles ======//
+
