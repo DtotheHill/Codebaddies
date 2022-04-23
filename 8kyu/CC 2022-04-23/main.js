@@ -255,3 +255,14 @@ function findNeedle(haystack) {
   let foundIt = haystack.findIndex(index => index === 'needle')
   return `found the needle at position ${foundIt}`
 }
+
+
+//====== 8kyu MakeUpperCase ====== //
+
+// Write a function which converts the input string to uppercase.
+
+
+
+function makeUpperCase(str) {
+  return str.toUpperCase()
+}
