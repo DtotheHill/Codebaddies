@@ -266,3 +266,17 @@ function findNeedle(haystack) {
 function makeUpperCase(str) {
   return str.toUpperCase()
 }
+
+
+
+// ===== 8kyu Reversed sequence ====== //
+
+// Build a function that returns an array of integers from n to 1 where n>0.
+
+const reverseSeq = n => {
+  const reversey =[]
+  for (let i =n; i > 0; i-=1){
+    reversey.push(i)
+  }
+  return reversey
+};
