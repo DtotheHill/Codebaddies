@@ -226,3 +226,15 @@ function bonusTime(salary, bonus) {
 // Given a year, return the century it is in.
 
 const century = year => Math.ceil(year/100)
+
+
+// ====== 8kyu Abbreviate a Two Word Name ======//
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+function abbrevName(name){
+  let abbrev = name.split(' ').map(firstLetter => firstLetter[0]).join('.').toUpperCase()
+  return abbrev
+}
