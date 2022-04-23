@@ -103,3 +103,12 @@ function greet(name){
 function invert(array) {
   return array.map(num => num * -1)
 }
+
+
+// ====== 8kyu Reversed Words ======// 
+
+// Complete the solution so that it reverses all of the words within the string passed in.
+
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ')
+}
