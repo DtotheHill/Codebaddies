@@ -29,3 +29,15 @@ function binToDec(bin){
 function removeChar(str){
   return str.slice(1,-1)
 }
+
+
+// ====== 8kyu Find the smallest ineger in an array ======//
+
+// Given an array of integers your solution should find the smallest integer.
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
+
