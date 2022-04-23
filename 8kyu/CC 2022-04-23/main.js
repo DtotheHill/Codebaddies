@@ -199,3 +199,30 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 function grow(x){
   return x.reduce((a,b)=> a * b)
 }
+
+
+// ====== 8kyu Do I get a bonus ======//
+
+// It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... but who is going to make the most money?
+
+// Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
+
+// If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+
+function bonusTime(salary, bonus) {
+  if (bonus === true){
+    return `£${salary * 10}`
+  }if (bonus === false){
+    return `£${salary}`
+  }
+}
+
+
+// ====== 8kyu Century from year ======//
+// Introduction
+// The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+
+// Task
+// Given a year, return the century it is in.
+
+const century = year => Math.ceil(year/100)
