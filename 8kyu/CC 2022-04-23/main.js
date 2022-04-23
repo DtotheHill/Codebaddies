@@ -49,3 +49,13 @@ class SmallestIntegerFinder {
 var stringToNumber = function(str){
   return +str
 }
+
+
+
+// ====== 8kyu Convert a Boolean to a String ======//
+
+// Implement a function which convert the given boolean value into its string representation.
+
+function booleanToString(b){
+  return b.toString()
+}
