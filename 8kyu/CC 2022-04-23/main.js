@@ -41,3 +41,11 @@ class SmallestIntegerFinder {
   }
 }
 
+
+//===== 8kyu Convert a string to a number ======//
+
+// convert string to number
+
+var stringToNumber = function(str){
+  return +str
+}
