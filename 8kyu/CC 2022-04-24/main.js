@@ -13,3 +13,15 @@ Object.freeze(MrFreeze)
 function twoDecimalPlaces(n) {
   return (+(n.toFixed(2)))
 }
+
+
+// ====== 8kyu Incorrect division method ======//
+
+// fix the error 
+
+
+// original 
+// const solve = (x, y) => x // y
+
+// solution 
+const solve = (x, y) => x / y
