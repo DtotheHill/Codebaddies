@@ -72,3 +72,18 @@ function position(letter){
   let pos = letter.charCodeAt()- 96
   return `Position of alphabet: ${pos}` 
 }
+
+
+// ====== 8kyu String templates -Bug Fixing # 5 ======//
+
+//original
+
+// function buildString(...template){
+//   return `I like #{template.join(',')}`;
+// }
+
+
+//solution
+function buildString(...template){
+  return `I like ${template.join(', ')}!`
+}
