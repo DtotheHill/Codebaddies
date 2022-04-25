@@ -93,3 +93,25 @@ function grader(score) {
     return 'F'
   }
 }
+
+
+// ====== 8kyu Return to Sanity ====== //
+
+// Fix the bugs
+
+//orginal 
+
+// function mystery() {
+//   var results =
+//     {sanity: 'Hello'};
+//   return
+//     results;
+// }
+
+
+
+// Solution
+function mystery() {
+  var results = {sanity: 'Hello'};
+  return results;
+}
