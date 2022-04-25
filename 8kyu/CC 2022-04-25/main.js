@@ -168,7 +168,7 @@ function ifChuckSaysSo(){
   return !true
 }
 
-// ====== 8kyu Multiply the number =====//
+// ====== 8kyu Multiply the number =====//g
 
 // Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
 
@@ -176,3 +176,14 @@ const multiply = number => {
   const num = String(Math.abs(number)).length
   return number * 5 ** num
 }
+
+
+// ====== 8kyu Who ate the cookie? ======//
+
+// For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. If the input is a float or an int then "Monica" ate the cookie. If the input is anything else "the dog" ate the cookie. The way to return the statement is: "Who ate the last cookie? It was (name)!"
+
+// Ex: Input = "hi" --> Output = "Who ate the last cookie? It was Zach! (The reason you return Zach is because the input is a string)
+
+// Note: Make sure you return the correct message with correct spaces and punctuation.
+
+return typeof x == "string" ? "Who ate the last cookie? It was Zach!" : typeof x == "number" ? "Who ate the last cookie? It was Monica!" : "Who ate the last cookie? It was the dog!";
