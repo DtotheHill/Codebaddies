@@ -205,3 +205,17 @@ function getNumberFromString(s) {
 function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0
 }
+
+
+// ====== 8kyu Are you playing banjo? ======//
+
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+function areYouPlayingBanjo(name) {
+  if (name.toLowerCase().charAt(0) == 'r'){
+    return `${name} plays banjo`
+  }else {
+    return `${name} does not play banjo`
+  }
+}
