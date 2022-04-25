@@ -67,3 +67,29 @@ function calculator(a,b,sign){
 function check(a,x){
   return a.includes(x)
 };
+
+
+//====== 8kyu Grader ======//
+
+// Create a function that takes a number as an argument and returns a grade based on that number.
+
+// Score	Grade
+// Anything greater than 1 or less than 0.6	"F"
+// 0.9 or greater	"A"
+// 0.8 or greater	"B"
+// 0.7 or greater	"C"
+// 0.6 or greater
+
+function grader(score) {
+  if (score >=.6 && score <.7 ){
+    return 'D'
+  }else if (score >=.7 && score <.8 ){
+    return 'C'
+  }else if (score >=.8 && score <.9){
+    return 'B'
+  }else if (score >=.9 && score <=1){
+    return 'A'
+  }else {
+    return 'F'
+  }
+}
