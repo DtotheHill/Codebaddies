@@ -115,10 +115,28 @@ function mystery() {
 }
 
 
-// 8kyu Price of Mangoes ======// 
+// ====== 8kyu Price of Mangoes ======// 
 
 // There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
 
 function mango(quantity, price){
   return price * (quantity - Math.floor(quantity / 3));
+}
+
+//====== 8kyu Training JS#10: loop statement --for ======//
+
+// Coding in function pickIt, function accept 1 parameter:arr, it's a number array, we need traverse arr by using for loop, if element is odd number, push it to array odd, if it's a even number, push it to array even.
+
+// I've defined two array odd and even in the function, and also wrote the return statement. your work is write a for loop.
+
+function pickIt(arr){
+  var odd=[],even=[];
+  for (let i=0; i <=arr.length-1; i++){
+    if (arr[i] % 2 === 0){
+      even.push(arr[i])
+    }else {
+      odd.push(arr[i])
+    }
+  }
+  return [odd,even];
 }
