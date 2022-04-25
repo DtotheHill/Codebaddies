@@ -264,3 +264,20 @@ const areaOrPerimeter = function(l , w) {
 // Your task is to create the functionisDivideBy (or is_divide_by) to check if an integer number is divisible by both integers a and b.
 
 const isDivideBy = (number, a, b) => number % a === 0 && number % b ===0
+
+
+// ====== 8kyu Rock Paper Scissors! ======//
+
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+
+const rps = (p1, p2) => {
+  if (p1==='scissors'&&p2==='paper') return `Player 1 won!`;
+  if (p1==='paper'&&p2==='rock') return `Player 1 won!`;
+  if (p1==='rock'&&p2==='scissors') return `Player 1 won!`;
+  if (p1==='paper'&&p2==='scissors') return `Player 2 won!`;
+  if (p1==='rock'&&p2==='paper') return `Player 2 won!`;
+  if (p1==='scissors'&&p2==='rock') return `Player 2 won!`;
+  if (p1==='scissors'&&p2==='scissors') return `Draw!`;
+  if (p1==='paper'&&p2==='paper') return `Draw!`;
+  if (p1==='rock'&&p2==='rock') return `Draw!`;
+  };
