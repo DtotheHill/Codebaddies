@@ -167,3 +167,12 @@ function checkTheBucket(bucket){
 function ifChuckSaysSo(){
   return !true
 }
+
+// ====== 8kyu Multiply the number =====//
+
+// Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
+
+const multiply = number => {
+  const num = String(Math.abs(number)).length
+  return number * 5 ** num
+}
