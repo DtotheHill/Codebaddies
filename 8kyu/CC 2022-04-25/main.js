@@ -186,4 +186,14 @@ const multiply = number => {
 
 // Note: Make sure you return the correct message with correct spaces and punctuation.
 
-return typeof x == "string" ? "Who ate the last cookie? It was Zach!" : typeof x == "number" ? "Who ate the last cookie? It was Monica!" : "Who ate the last cookie? It was the dog!";
+function cookie(x){
+  return typeof x == "string" ? "Who ate the last cookie? It was Zach!" : typeof x == "number" ? "Who ate the last cookie? It was Monica!" : "Who ate the last cookie? It was the dog!";
+}
+
+//====== 8kyu Get number from string ======//
+
+// Write a function which removes from string all non-digit characters and parse the remaining to number. E.g: "hell5o wor6ld" -> 56
+
+function getNumberFromString(s) {
+  return Number(s.match(/\d/g).join(''));
+}
