@@ -6,3 +6,13 @@ function highAndLow(numbers){
   let nums = numbers.split(' ')
   return `${Math.max(...nums)} ${Math.min(...nums)}`
 }
+
+
+
+// ====== 8kyu Remove exclamation marks ======//
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g,'')
+}
+
+
