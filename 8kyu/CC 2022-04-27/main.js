@@ -307,3 +307,11 @@ const phrases = [
 ]
 
 let howMuchILoveYou = petals => phrases[petals % 6]
+
+// ======= 8kyu Is it a palindrome ======//
+
+// Write a function that checks if a given string (case insensitive) is a palindrome.
+
+const isPalindrome = (x) => {
+  return x.split("").reverse().join("").toLowerCase() === x.toLowerCase() ? true : false
+}
