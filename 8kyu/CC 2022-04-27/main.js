@@ -106,3 +106,59 @@ function expressionMatter(a, b, c) {
 function switchItUp(number){
   var words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
   return words[number];
+}
+
+
+
+// ======= 8kyu altERnaTIng cAsE <=> ALTerNAtiNG CaSe ======//
+
+// Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase.
+
+String.prototype.toAlternatingCase = function () {
+  return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
+}
+
+
+// 8kyu Unfinished Loop -Bug fixing #1 ======//
+
+// Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!
+
+
+// Original
+
+// function createArray(number){
+//   var newArray = [];
+  
+//   for(var counter = 1; counter <= number;){
+//     newArray.push(counter);
+//   }
+  
+//   return newArray;
+// }
+
+
+// solution
+function createArray(number){
+  var newArray = [];
+  
+  for(var i = 1;  i<= number; i++){
+    newArray.push(i);
+  }
+  
+  return newArray;
+}
+
+
+
+//======8kyu My head is at the wrong end =====//
+
+// You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+
+// Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+
+// Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics
+
+function fixTheMeerkat(arr) {
+  return arr.reverse()
+}
+
