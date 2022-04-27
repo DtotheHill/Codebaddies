@@ -234,3 +234,28 @@ welsh: 'Croeso'
 }
   return base[language] || base.english
 }
+
+
+// ======= 8kyu Difference of volumes of Cuboids ======//
+
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+function findDifference([a,b,c], [d,e,f]) {
+  return Math.abs(a*b*c - d*e*f)
+}
+
+
+
+// ====== 8kyu Sort and Star ======//
+
+// You will be given a vector of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+
+// The returned value must be a string, and have "***" between each of its letters.
+
+// You should not remove or add elements from/to the array.
+
+function twoSort(s) {
+  return s.sort()[0].split('').join('***')
+}
