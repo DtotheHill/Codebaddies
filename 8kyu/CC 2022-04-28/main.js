@@ -361,3 +361,67 @@ function HQ9(code) {
     return 
   }
 }
+
+
+// ====== 8kyu Template strings =====//
+
+// Task
+// Your task is to return the correct string using the Template String Feature.
+// Input
+// Two Strings, no validation is needed.
+
+var TempleStrings = function(obj, feature) {
+  return `${obj} are ${feature}`
+}
+
+// ====== 8kyu Type of sum ======//
+
+// Return the type of the sum of the two arguments
+
+function typeOfSum(a, b) {
+  let type = a + b
+  return typeof type
+}
+
+
+// ======= 8kyu Name on billboard ======//
+
+// You can print your name on a billboard ad. Find out how much it will cost you. Each letter has a default price of £30, but that can be different if you are given 2 parameters instead of 1.
+
+// You can not use multiplier "*" operator.
+
+// If your name would be Jeong-Ho Aristotelis, ad would cost £600. 20 leters * 30 = 600 (Space counts as a letter).
+
+function billboard(name, price = 30){
+  return name.length / (1/price)
+}
+
+
+// ====== 8kyu Ensure question =======//
+
+// Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string.
+
+function ensureQuestion(s) {
+  if (s.includes('?')){
+    return s
+  }else {
+    return `${s}?`
+  }
+}
+
+// ======8kyu Printing Array elements with Comma delimiters ======//
+
+
+// Input: Array of elements
+
+// ["h","o","l","a"]
+
+// Output: String with comma delimited elements of the array in th same order.
+
+// "h,o,l,a"
+
+// Note: if this seems too simple for you try the next level
+
+function printArray(array){
+  return array.join(',')
+}
