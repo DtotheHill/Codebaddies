@@ -329,3 +329,77 @@ const isPalindrome = (x) => {
 function capitalizeWord(word) {
   return word[0].toUpperCase()+word.slice(1)
 }
+
+
+
+// ====== 8kyu Reverse list order ======//
+
+// In this kata you will create a function that takes in a list and returns a list with the reverse order.
+
+function reverseList(list) {
+  return list.reverse()
+}
+
+
+
+// ====== 8kyu Exclusive "or" (xor) Logical Operator ======//
+
+
+
+// Since we cannot define keywords in Javascript (well, at least I don't know how to do it), your task is to define a function xor(a, b) where a and b are the two expressions to be evaluated. Your xor function should have the behaviour described above, returning true if exactly one of the two expressions evaluate to true, false otherwise.
+
+function xor(a, b) {
+  if (a === true && b === false){
+    return true
+  }else if (a === false && b === true){
+    return true
+  }else {
+    return false
+  }
+}
+
+
+// ======8kyu Miles per gallon to kilometers per liter ======//
+
+// Sometimes, I want to quickly be able to convert miles per imperial gallon into kilometers per liter.
+
+// Create an application that will display the number of kilometers per liter (output) based on the number of miles per imperial gallon (input).
+
+// Make sure to round off the result to two decimal points. If the answer ends with a 0, it should be rounded off without the 0. So instead of 5.50, we should get 5.5.
+
+// Some useful associations relevant to this kata: 1 Imperial Gallon = 4.54609188 litres 1 Mile = 1.609344 kilometres
+
+function converter (mpg) {
+  let conversion =  mpg / 2.82481053149
+  return +conversion.toFixed(2)
+}
+
+
+// ======8kyu Is it a number ======//
+
+// Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+
+function isDigit(s) {
+  return s ==parseFloat(s)
+}
+
+
+// ====== 8kyu Do you speak English ======//
+
+// Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
+
+// The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
+
+// Upper or lower case letter does not matter -- "eNglisH" is also correct.
+
+// Return value as boolean values, true for the string to contains "English", false for it does not.
+
+function spEng(sentence){
+  let x = sentence.toLowerCase()
+  if(x.includes('english')){
+    return true
+  }else {
+    return false
+  }
+}
+
