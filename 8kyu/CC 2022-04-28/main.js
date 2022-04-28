@@ -62,3 +62,43 @@ function wrap(value) {
 function symmetricPoint([a,b],[c,d]) {
   return [c * 2 - a, d * 2 - b]
 }
+
+//======8kyu Is the date today ======// 
+
+
+// Write a simple function that takes a Date as a parameter and returns a Boolean representing whether the date is today or not.
+
+// Make sure that your function does not return a false positive by only checking the day.
+
+function isToday(date) {
+  return new Date().toDateString() === date.toDateString()
+}
+
+
+// ====== 8kyu A strange trip to the market ======//
+
+// You're on your way to the market when you hear beautiful music coming from a nearby street performer. The notes come together like you wouln't believe as the musician puts together patterns of tunes. As you wonder what kind of algorithm you could use to shift octaves by 8 pitches or something silly like that, it dawns on you that you have been watching the musician for some 10 odd minutes. You ask, "how much do people normally tip for something like this?" The artist looks up. "It's always gonna be about tree fiddy."
+
+// It was then that you realize the musician was a 400 foot tall beast from the paleolithic era! The Loch Ness Monster almost tricked you!
+
+// There are only 2 guaranteed ways to tell if you are speaking to The Loch Ness Monster: A) it is a 400 foot tall beast from the paleolithic era; B) it will ask you for tree fiddy.
+
+// Since Nessie is a master of disguise, the only way accurately tell is to look for the phrase "tree fiddy". Since you are tired of being grifted by this monster, the time has come to code a solution for finding The Loch Ness Monster. Note that the phrase can also be written as "3.50" or "three fifty".
+
+function isLockNessMonster(s) {
+  return s.includes("tree fiddy") || s.includes("3.50");
+}
+
+// ======= 8kyu Add new item (collections are passed by reference) ======//
+
+// Add an item to the list:
+
+// AddExtra method adds a new item to the list and returns the list. The new item can be any object, and it does not matter. (lets say you add an integer value, like 13)
+
+// In our test case we check to assure that the returned list has one more item than the input list. However the method needs some modification to pass this test.
+
+// P.S. You have to create a new list and add a new item to that. (This Kata is originally designed for C# language and it shows that adding a new item to the input list is not going to work, even though the parameter is passed by value, but the value is poining to the reference of list and any change on parameter will be seen by caller)
+
+function addExtra( listOfNumbers ){
+  return [...listOfNumbers,1]
+}
