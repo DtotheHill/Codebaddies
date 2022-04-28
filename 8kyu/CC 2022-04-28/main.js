@@ -226,3 +226,34 @@ function getDrinkByProfession(param) {
     default: return "Beer";
   }
 }
+
+//======8kyu SpeedCode #2 - Array Madness ======//
+
+// Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+
+function arrayMadness(a,b) {
+  let squares = 0
+  let cubes = 0
+  
+  for (let i =0; i<a.length; i++){
+    squares +=Math.pow(a[i],2)
+  } 
+   for (let j =0; j<b.length; j++){
+     cubes += Math.pow(b[j],3) 
+   }
+   if (squares > cubes){
+    return true
+  }else {
+    return false
+  }
+ }
+
+// ======8kyu Find the Difference in Age between Oldest and Youngest Family Members ======//
+
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+
+// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
+
+ function differenceInAges(ages){
+  return [Math.min(...ages),Math.max(...ages),Math.max(...ages)-Math.min(...ages)]
+}
