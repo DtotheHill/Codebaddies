@@ -68,3 +68,37 @@ function leo(o){
   if (o==86) return "Not even for Wolf of wallstreet?!"
   if (o>=88) return "Leo got one already!"
 }
+
+// ======8kyu Closest elevator =====//
+
+// Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write a function elevator accepting 3 arguments (in order):
+
+// left - The current floor of the left elevator
+// right - The current floor of the right elevator
+// call - The floor that called an elevator
+// It should return the name of the elevator closest to the called floor ("left"/"right").
+
+// In the case where both elevators are equally distant from the called floor, choose the elevator to the right.
+
+// You can assume that the inputs will always be valid integers between 0-2.
+
+const elevator = (left, right, call) => Math.abs(call-left) < Math.abs(call-right) ? 'left' : 'right'
+
+
+
+// ======8kyu Classy classes ======//
+
+// Basic Classes, this kata is mainly aimed at the new JS ES6 Update introducing classes
+
+// Task
+// Your task is to complete this Class, the Person class has been created. You must fill in the Constructor method to accept a name as string and an age as number, complete the get Info property and getInfo method/Info getter which should return johns age is 34
+
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+   get info(){
+    return `${this.name}s age is ${this.age}` 
+  }
+}
