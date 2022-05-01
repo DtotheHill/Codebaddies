@@ -168,3 +168,18 @@ function describeAge(a) {
   return `You're a(n) ${
     a <= 12 ? 'kid' : a <= 17 ? 'teenager' : a <= 64 ? 'adult' : 'elderly'}`
 }
+
+
+// ====== 8kyu Shifty closures ======//
+
+
+
+var greet_abe = function() {
+  var name = 'Abe';
+  return "Hello, " + name + '!';
+};
+
+var greet_ben = function() {
+  var name = 'Ben';
+  return "Hello, " + name + '!';
+};
