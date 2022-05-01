@@ -90,3 +90,17 @@ var R = 0.082;
 
 return (((M1 + M2) * R * T) / V) * 1000;
 }
+
+//=======8kyu UEFA EURO 2016 ======//
+
+// Finish the uefaEuro2016() function so it return string just like in the examples below:
+
+function uefaEuro2016([t1,t2],[s1,s2]){
+  if(s1===s2){
+    return `At match ${t1} - ${t2}, teams played draw.`
+  }else if (s2>s1){
+    return `At match ${t1} - ${t2}, ${t2} won!`
+  }else {
+    return `At match ${t1} - ${t2}, ${t1} won!`
+  }
+}
