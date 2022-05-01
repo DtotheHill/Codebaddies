@@ -61,3 +61,18 @@ function distanceBetweenPoints(a, b) {
 function first(arr, n=1) {
   return arr.slice(0,n)
 }
+
+//======8kyu Logical calculator ======//
+
+// Your Task
+// Given an array of Boolean values and a logical operator, return a Boolean result based on sequentially applying the operator to the values in the array.
+
+const operations={
+  AND: (a,b)=> a && b,
+  OR: (a,b)=> a || b,
+  XOR: (a,b)=> a !== b,
+}
+
+function logicalCalc(array, op){
+  return array.reduce(operations[op])
+}
