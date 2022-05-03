@@ -31,3 +31,13 @@ class Counter {
 function splitAndMerge(str, sp) {
   return str.split(" ").map(word => word.split("").join(sp)).join(" ");
 }
+
+// ======8kyu Power ======//
+
+// The goal is to create a function 'numberToPower(number, power)' that "raises" the number up to power (ie multiplies number by itself power times).
+
+function numberToPower(number, power){
+  let result=1;
+    for (let i=1;i<=power;i++){ result*=number}
+  return result
+  }
