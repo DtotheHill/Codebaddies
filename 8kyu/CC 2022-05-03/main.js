@@ -40,4 +40,17 @@ function numberToPower(number, power){
   let result=1;
     for (let i=1;i<=power;i++){ result*=number}
   return result
-  }
+}
+
+// ======= 8kyu Age Range Compatibility Equation =======//
+
+Given an integer (1 <= n <= 100) representing a person's age, return their minimum and maximum age range.
+
+This equation doesn't work when the age <= 14, so use this equation instead:
+
+function datingRange(age){
+  return age>=14?`${Math.floor(age/2+7)}-${Math.floor((age-7)*2)}`:
+                 `${Math.floor(age-(age*0.1))}-${Math.floor(age+(age*0.1))}`
+}
+
+
