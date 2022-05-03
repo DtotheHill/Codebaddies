@@ -44,13 +44,24 @@ function numberToPower(number, power){
 
 // ======= 8kyu Age Range Compatibility Equation =======//
 
-Given an integer (1 <= n <= 100) representing a person's age, return their minimum and maximum age range.
+// Given an integer (1 <= n <= 100) representing a person's age, return their minimum and maximum age range.
 
-This equation doesn't work when the age <= 14, so use this equation instead:
+// This equation doesn't work when the age <= 14, so use this equation instead:
 
 function datingRange(age){
   return age>=14?`${Math.floor(age/2+7)}-${Math.floor((age-7)*2)}`:
                  `${Math.floor(age-(age*0.1))}-${Math.floor(age+(age*0.1))}`
 }
 
+
+
+// ====== 8kyu Simple Comparison ======//
+
+// Write a function that will compare two values, one will be a number and one will be a string. Return true if they are the same character (regardless of their different data types) and return false if they are not.
+
+// To make this challange harder and to promp the challenger to read up about coercion I have disabled some of the built in methods including .toString(), .join(), .split(), parseInt and .Number().
+
+function add(a, b){
+	return +a==+b
+}
 
