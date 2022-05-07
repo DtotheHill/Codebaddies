@@ -18,3 +18,21 @@ function playerRankUp (points) {
     if (points>=100) return "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up."
   return false
   }
+
+
+  // ====== 8kyu Are there any arrows left? ======//
+
+//   Check your arrows
+// You have a quiver of arrows, but some have been damaged. The quiver contains arrows with an optional range information (different types of targets are positioned at different ranges), so each item is an arrow.
+// You need to verify that you have some good ones left, in order to prepare for battle:
+
+// anyArrows([{range: 5}, {range: 10, damaged: true}, {damaged: true}])
+// If an arrow in the quiver does not have a damaged status, it means it's new.
+
+// The expected result is a boolean, indicating whether you have any good arrows left.
+
+
+function anyArrows(arrows){
+    // arrow it
+    return arrows.some(arrow =>!arrow.damaged);
+  }
