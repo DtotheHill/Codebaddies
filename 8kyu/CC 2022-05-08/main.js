@@ -43,4 +43,13 @@ function yourFutureCareer(){
 		if (career <= 0.32) return 'FrontEnd Developer'
 		if (career <= 0.65) return 'BackEnd Developer'
 		return 'Full-Stack Developer'
-    }
+}
+
+// ====== 8kyu Regex count lowercase letters =======//
+
+// Your task is simply to count the total number of lowercase letters in a string.
+
+
+function lowercaseCount(str){
+  return (str.match(/[a-z]/g) || []).length;
+}
