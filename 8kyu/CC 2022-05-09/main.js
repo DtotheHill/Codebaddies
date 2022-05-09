@@ -106,3 +106,15 @@ function find(a, e) {
   return a.includes(e)?  a.indexOf(e): "Not found"
   
 }
+
+// ======8kyu Circular Objects #1 - Running around in circles =====//
+
+// Task
+// Define a circular object circular such that the following are true:
+
+// circular.value === "Hello World"
+// circular === circular.self
+// circular.self === circular.self.self
+
+let circular ={value:"Hello World"}
+circular.self = circular
