@@ -645,3 +645,35 @@ function myFirstKata(a,b) {
 let items = []
 items.push ({a: "b", c: "d"})
 
+// ====== 8kyu Finish Guess the Number Game =======//
+
+// Imagine you are creating a game where the user has to guess the correct number. But there is a limit of how many guesses the user can do.
+
+// If the user tries to guess more than the limit, the function should throw an error.
+// If the user guess is right it should return true.
+// If the user guess is wrong it should return false and lose a life.
+// Can you finish the game so all the rules are met?
+
+class Guesser {
+  constructor(number, lives) {
+    this.number = number;
+    this.lives = lives;
+  }
+  
+  guess(n) {
+  if (!this.lives) throw new Error('You have no more life')
+   if (n === this.number) return true
+  this.lives--
+    return false;
+  }
+}
+
+// ======= 8kyu isReallyNaN =======//
+
+// I've hit a few bugs in my Java/Type/Coffee-script code recently, and I've traced the problem back to the global isNaN function I was using. I had expected it to be more discerning, but it's returning true for undefined right now.
+
+// Write a function isReallyNaN that returns true only if passed in an argument that evalutes to NaN, and returns false otherwise.
+
+// Any solution is acceptable!
+
+const isReallyNaN = Number.isNaN
