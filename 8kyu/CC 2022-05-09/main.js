@@ -987,3 +987,42 @@ const circleCircumference = circle => 2 * Math.PI * circle.radius;
 function logs(x , a, b){
   return (Math.log(a*b) / Math.log(x));
 }
+
+// ======8kyu They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite? //
+
+// Give you two strings: s1 and s2. If they are opposite, return true; otherwise, return false. Note: The result should be a boolean value, instead of a string.
+
+// The opposite means: All letters of the two strings are the same, but the case is opposite. you can assume that the string only contains letters or it's a empty string. Also take note of the edge case - if both strings are empty then you should return false/False.
+
+const isOpposite = (s1, s2) => {
+  if (s1 === s2 || s1.toLowerCase() !== s2.toLowerCase()) return false
+
+  for (let i = 0; i < s1.length; i++) {
+    if (s1.charAt(i) === s2.charAt(i)) return false
+  }
+
+  return true
+}
+
+
+// ======8kyu What's up next? ========//
+
+// Given a sequence of items and a specific item in that sequence, return the item immediately following the item specified. If the item occurs more than once in a sequence, return the item after the first occurence. This should work for a sequence of any type.
+
+// When the item isn't present or nothing follows it, the function should return nil in Clojure and Elixir, Nothing in Haskell, undefined in JavaScript, None in Python.
+
+const nextItem = (xs, item) => {
+  let found = false
+  let finalValue
+
+  for (const i of xs) {
+    if (found) {
+      finalValue = i
+      break
+    }
+
+    if (i === item) found = true
+  }
+
+  return finalValue
+}
