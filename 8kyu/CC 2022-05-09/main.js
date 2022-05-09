@@ -846,3 +846,16 @@ class Cat extends Animal {
 
 const hotpo = (n, acc = 0) =>
   n <= 1 ? acc : hotpo(n % 2 === 0 ? n / 2 : 3 * n + 1, acc + 1)
+
+
+// ======8kyu For Twins: 1. Types ======//
+
+// Prolog:
+// This kata series was created for friends of mine who just started to learn programming. Wish you all the best and keep your mind open and sharp!
+
+// Task:
+// Write function typeValidation that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
+
+function typeValidation(variable, type) {
+  return typeof variable == type
+}
