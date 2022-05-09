@@ -412,3 +412,56 @@ function bigToSmall(arr){
   return [].concat(...arr).sort((a,b)=>b-a).join('>');
  
 }
+
+// ======8kyu Training JS #31: methods of arrayObject---isArray() indexOf() and toString() ======//
+
+// Coding in function blackAndWhite. function accept 1 parameter arr(a number array).
+
+// If arr is not an array, function should return:
+
+// "It's a fake array"
+// If arr contains elements 5 and 13, function should return:
+
+// "It's a black array"
+// If arr contains neither 5 nor 13, function should return:
+
+// "It's a white array"
+// Examples
+// blackAndWhite(5,13) should return "It's a fake array"
+// blackAndWhite([5,13]) should return "It's a black array"
+// blackAndWhite([5,12]) should return "It's a white array" 
+
+function blackAndWhite(arr){
+  return        !Array.isArray(arr)?"It's a fake array":
+  arr.includes(5)&&arr.includes(13)?"It's a black array":"It's a white array"
+}
+
+// ====== 8kyu Training JS #34: methods of Math---pow() sqrt() and cbrt() ======//
+
+// Coding in function cutCube. function accept 2 parameter: volume and n. volume is the volume of a cube. If we cut the cube into n block. please determine whether the length of the cube is an integer. return true or false.
+
+// For exmaple:
+
+// volume=27, it can be divided into 27 blocks, each small cube side length is 1
+
+// cutCube(27,27) should return true
+// volume=512, it can be divided into 8 blocks, each small cube side length is 4
+
+// cutCube(512,8) should return true
+// volume=512, it can be divided into 64 blocks, each small cube side length is 2
+
+// cutCube(512,64) should return true
+// If the side length of small cube is not a integer, should return false.
+
+// cutCube(256,8) should return false
+// cutCube(27,3) should return false
+// cutCube(123,456) should return false
+// If it can't be divided evenly into n small cubes, should return false too.
+
+// cutCube(50000,50) should return false
+// cutCube(256,4) should return false
+// The two examples above seems to meet our requirements, but please note: a cube is unable to evenly divided into 50 pieces or 4 pieces. Only cubic numbers(such as 8,27,64,125,216...) can be used to divide the cube evenly.
+
+const isIntegerCube = n => Number.isInteger(Math.cbrt(n))
+
+const cutCube = (volume, n) => isIntegerCube(n) && isIntegerCube(volume / n)
