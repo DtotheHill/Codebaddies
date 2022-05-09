@@ -978,3 +978,12 @@ function sc(floor){
 
 const circleCircumference = circle => 2 * Math.PI * circle.radius;
 
+
+// ======8kyu easy logs ======//
+
+// Add two logs with base X, with the value of A and B. Example log A + log B where the base is X.
+
+
+function logs(x , a, b){
+  return (Math.log(a*b) / Math.log(x));
+}
