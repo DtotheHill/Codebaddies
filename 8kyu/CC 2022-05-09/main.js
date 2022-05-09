@@ -118,3 +118,10 @@ function find(a, e) {
 
 let circular ={value:"Hello World"}
 circular.self = circular
+
+
+// =======8kyu Not so black box =======//
+
+// The kata has been preloaded with a function called blackBox. Figure out what the function does.
+
+JSopenSesame();
