@@ -524,3 +524,52 @@ function barTriang([p1, p2], [p3,p4],[p5,p6]){
   return[+((p1+p5+p3)/3).toFixed(4),+((p2+p4+p6)/3).toFixed(4)]
   
 }
+
+
+// ====== 8kyu Crash override ======//
+
+// Every budding hacker needs an alias! The Phantom Phreak, Acid Burn, Zero Cool and Crash Override are some notable examples from the film Hackers.
+
+// Your task is to create a function that, given a proper first and last name, will return the correct alias.
+
+// Two objects that return a one word name in response to the first letter of the first name and one for the first letter of the surname are already given.
+
+// If the first character of either of the names given to the function is not a letter from A - Z, you should return "Your name must start with a letter from A - Z."
+
+// Sometimes people might forget to capitalize the first letter of their name so your function should accommodate for these grammatical errors.
+
+// var firstName = {A: 'Alpha', B: 'Beta', C: 'Cache' ...}
+// var surname = {A: 'Analogue', B: 'Bomb', C: 'Catalyst' ...}
+
+// aliasGen('Larry', 'Brentwood') === 'Logic Bomb'
+// aliasGen('123abc', 'Petrovic') === 'Your name must start with a letter from A - Z.'
+
+const firstLetter = str => str[0].toUpperCase()
+
+const isValidName = name => /[a-z]/gi.test(name)
+
+const aliasGen = (fName, sName) => isValidName(fName[0]) && isValidName(sName[0]) ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}` : 'Your name must start with a letter from A - Z.'
+
+
+// ====== 8kyu Days in the year ======//
+
+// A variation of determining leap years, assuming only integers are used and years can be negative and positive.
+
+// Write a function which will return the days in the year and the year entered in a string. For example 2000, entered as an integer, will return as a string 2000 has 366 days
+
+// There are a few assumptions we will accept the year 0, even though there is no year 0 in the Gregorian Calendar.
+
+// Also the basic rule for validating a leap year are as follows
+
+// Most years that can be divided evenly by 4 are leap years.
+
+// Exception: Century years are NOT leap years UNLESS they can be evenly divided by 400.
+
+// So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
+
+
+
+const yearDays = year =>
+    `${year} has ${
+      (!(year % 100) && year % 400) || year % 4 ? '365' : '366'
+} days`
